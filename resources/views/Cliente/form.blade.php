@@ -1,3 +1,4 @@
+<table class="table caption-top">
 <div class="position-absolute top-50 start-50 translate-middle">
 <div class="p-2 bg-light border">
 <label for="Nombre">Nombre</label>
@@ -34,4 +35,6 @@
 <button type="submit" class="btn btn-primary">Actualizar cliente</button>
 </div>
 </div>
+</table>
+
 
