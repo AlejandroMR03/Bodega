@@ -1,49 +1,55 @@
-<h4 class="text-center fst-italic">Lista de Clientes</h4>
+<h4 class="text-center fst-italic">Lista de Clientes
 <br>
+<br>
+<button onclick=" location.href='http://127.0.0.1:8000/' "type="button" class="btn btn-outline-warning">Inicio</button>
+<br>
+<br>
+<button onclick=" location.href='http://127.0.0.1:8000/cliente/create' " type="button" class="btn btn-outline-success">Crear nuevo Cliente</button>
+</h4>
 <link rel="stylesheet" href="app.css">
-<table class="table caption-top">
+<table class="table table-bordered mx-auto" style="width: 200px;">
     <!-- CSS only -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <thead class="table table-striped">
-        <div class="position-absolute top-50 start-50 translate-middle">
-
+    <thead class>
+        <div>
+    
         <tr>
             <th>#</th>
-            <th class="col">Nombre</th>
-            <th class="col">Primer<br>Apellido</th>
-            <th class="col">Segundo<br>Apellido</th>
-            <th class="col">Numero<br>Documento</th>
-            <th class="col">Direccion</th>
-            <th class="col">Telefono</th>
-            <th class="col">Fecha ultima Compra</th>
-            <th class="col">Numero Asociado</th>
-            <th class="col">Correo Electronico</th>
-            <th class="col">Foto</th>
-
+            <th class="text-center">Nombre</th>
+            <th class="text-center">Primer<br>Apellido</th>
+            <th class="text-center">Segundo<br>Apellido</th>
+            <th class="text-center">Numero<br>Documento</th>
+            <th class="text-center">Direccion</th>
+            <th class="text-center">Telefono</th>
+            <th class="text-center">Fecha ultima Compra</th>
+            <th class="text-center">Numero Asociado</th>
+            <th class="text-center">Correo Electronico</th>
+            <th class="text-center">Foto</th>
+        
         </tr>
     
 </div>
     </thead>
 
-    <tbody class="table table-striped">
+    <tbody class="table table-bordered mx-auto" style="width: 200px;">
         <div class="position-absolute top-50 start-50 translate-middle">
         @foreach ($clientes as $cliente ) {{--recibe el array datos. Toma la posición que se llama clientes y su alias es cliente--}}
 
 
         
         <tr>
-            <td>{{$cliente->id}}</td>
-            <td>{{$cliente->nombre}}</td>
-            <td>{{$cliente->primer_apellido}}</td>
-            <td>{{$cliente->segundo_apellido}}</td>
-            <td>{{$cliente->numero_documento}}</td>
-            <td>{{$cliente->direccion}}</td>
-            <td>{{$cliente->telefono}}</td>
-            <td>{{$cliente->fecha_ultima_compra}}</td>
-            <td>{{$cliente->numero_de_tarjeta_asociado}}</td>
-            <td>{{$cliente->correo_electronico}}</td>
-            <td><img src=" {{Storage::url($cliente->foto) }} " width="100" height="100" alt=""></td>
-            <td>
+            <td class="text-center">{{$cliente->id}}</td>
+            <td class="text-center">{{$cliente->nombre}}</td>
+            <td class="text-center">{{$cliente->primer_apellido}}</td>
+            <td class="text-center">{{$cliente->segundo_apellido}}</td>
+            <td class="text-center">{{$cliente->numero_documento}}</td>
+            <td class="text-center">{{$cliente->direccion}}</td>
+            <td class="text-center">{{$cliente->telefono}}</td>
+            <td class="text-center">{{$cliente->fecha_ultima_compra}}</td>
+            <td class="text-center">{{$cliente->numero_de_tarjeta_asociado}}</td>
+            <td class="text-center">{{$cliente->correo_electronico}}</td>
+            <td class="text-center"><img src=" {{Storage::url($cliente->foto) }} " width="100" height="100" alt=""></td>
+            <td class="text-center">
         </div>
             <div>
                 <a class="btn btn-outline-success" href="{{Route('edit')}}?id={{$cliente->id}}">Editar</a>

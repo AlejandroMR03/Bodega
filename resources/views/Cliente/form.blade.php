@@ -1,3 +1,7 @@
+<br>
+<br>
+<br>
+<p class="fst-italic text-center fs-1">Actualizar Cliente</p>
 <table class="table caption-top">
 <div class="position-absolute top-50 start-50 translate-middle">
 <div class="p-2 bg-light border">
@@ -25,7 +29,7 @@
 <label for="numero tarjeta asociado">numero tarjeta asociado</label>
 <input type="text" name="numero_de_tarjeta_asociado" value="{{ $cliente->numero_de_tarjeta_asociado}}" id="numero_de_tarjeta_asociado">
 <br>
-<label for="correo electronico">correo electronico</label>
+<label  for="correo electronico">correo electronico</label>
 <input type="text" name="correo_electronico" value="{{ $cliente->correo_electronico}}" id="correo_electronico">
 <br>
 <label for="foto">foto</label>

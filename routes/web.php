@@ -30,3 +30,7 @@ Route::get('cliente/create',[ClienteController::class,'create']);
 
 
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
